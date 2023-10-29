@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Color Toggle</title>
+</head>
+<body>
+    <h1>Background Color Toggle</h1>
+    <button id="toggleButton">Toggle Background Color</button>
+
+    <script>
+        const button = document.getElementById("toggleButton");
+        const colors = ["#FF5733", "#5FCCCF", "#FFC300", "#7B68EE", "#FF8300"];
+        let colorIndex = 0;
+
+        button.addEventListener("click", function() {
+            document.body.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        });
+    </script>
+</body>
+</html>
